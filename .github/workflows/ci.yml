@@ -43,7 +43,7 @@ jobs:
         channel: beta
     - run: flutter config --enable-web
     - run: flutter pub get
-    - run: flutter build web
+    - run: flutter build web --no-sound-null-safety
 
   build_apk:
     name: Build flutter (Android)
@@ -59,4 +59,4 @@ jobs:
           channel: "beta"
       - run: flutter pub get
       - run: flutter clean
-      - run: flutter build apk
+      - run: flutter build apk --no-sound-null-safety
