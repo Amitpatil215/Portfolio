@@ -9,7 +9,7 @@ class OpenSourceCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(30),
       ),
-      elevation: 10,
+      elevation: 3,
       child: Container(
         padding: const EdgeInsets.only(
           top: 12,

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'Widget/open_source_card.dart';
 
@@ -14,8 +16,8 @@ class WorkTabScreen extends StatelessWidget {
                 title: 'Open Source',
                 card: OpenSourceCard(),
               ),
-              Container(
-                color: Colors.transparent,
+              SizedBox(
+                height: 10,
               ),
               Section(
                 title: 'Personal Project',
@@ -46,8 +48,17 @@ class Section extends StatelessWidget {
               Container(
                 height: 200,
                 decoration: BoxDecoration(
-                  color: Colors.amber,
                   borderRadius: BorderRadius.circular(15),
+                ),
+                child: ImageFiltered(
+                  imageFilter: ImageFilter.blur(
+                    sigmaX: 2.0,
+                    sigmaY: 0.0,
+                  ),
+                  child: Image.asset(
+                    'assets/images/fauna.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 width: double.infinity,
               ),
@@ -101,7 +112,10 @@ class TitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: TextStyle(fontSize: 22),
+      style: TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 22,
+      ),
     );
   }
 }
