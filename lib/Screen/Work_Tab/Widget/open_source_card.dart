@@ -116,7 +116,7 @@ class OpenSourceCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                'Implemented Circle avatr fallback' * 3,
+                'Implemented Circle avatar fallback image as a forground image.',
                 style: TextStyle(
                   fontSize: 20,
                 ),
@@ -124,6 +124,7 @@ class OpenSourceCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
             ),
+            Spacer(),
             Divider(
               color: Colors.black,
             ),
@@ -139,6 +140,11 @@ class OpenSourceCard extends StatelessWidget {
                   onPressed: () {},
                 ),
                 Text('5'),
+                IconButton(
+                  icon: Icon(Icons.remove_red_eye_outlined),
+                  onPressed: () {},
+                ),
+                Text('30'),
                 Spacer(),
                 IconButton(
                   icon: Icon(Icons.share_outlined),
